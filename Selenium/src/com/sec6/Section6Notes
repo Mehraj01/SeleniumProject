@@ -1,0 +1,76 @@
+----------------------------L 29-30 ---- Verifying Xpath and CSS ---------------------------------------
+xpath verifying code :       $("//tagName[@atribute='value']")
+
+CSS verifycation  code :    $x("CSS code")
+
+----------------------------Lecture 31 -- Generate Custom Xpath from HTML attributes-------------------------------------------
+
+HTML code: /*<input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" 
+             id="username" aria-describedby="error" style="display: block;" */
+        /*<input class="button r4 wide primary" type="submit" id="Login" name="Login" value="Log In">*/
+        
+ tagName:  input            
+ attribute : type
+ value:    "email"
+ attribute : name
+ value:    "username" 
+ 
+note: make sure to select unique atribute     
+
+Syntax of Xpath:       //tagName[@atribute='value']
+let's create Xpath:    //input[@value='Log In'] , //input[@name='Login']
+
+note: If you not sure about specific tagName you can replace tagName * (star) sign
+syntax:   //*[@value='Log In'] , //input[@name='Login']
+
+
+-----------------------------L 32 ---Generate Custom CSS from HTML attributes--------------------------
+  html <input type="email" class="inputtext" name="email" id="email" data-testid="royal_email">
+       <input type="password" class="inputtext" name="pass" id="pass" data-testid="royal_pass">
+facebook email or phone  xpath:  //*[@id="email"]
+facebook password xpath:           //*[@id="pass"]
+ 
+ 
+ 
+       note: no // slash in CSS code.
+Syntax for CSS:   tagname[attribute = 'value']
+      note: If you not sure about specific tagName   just dont write it  
+            [attribute = 'value']        
+
+other syntaxes for CSS;
+
+// if you have only id or classname you can use this shortcut for CSS
+<input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" 
+
+syntax:  tagname#id
+
+code:   input#username
+
+
+
+syntax:  tagname#classname
+code:    input.#email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
