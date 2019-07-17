@@ -32,7 +32,7 @@ facebook password xpath:           //*[@id="pass"]
  
  
  
-       note: no // slash in CSS code.
+       note: no // slash and @  in CSS code.
 Syntax for CSS:   tagname[attribute = 'value']
       note: If you not sure about specific tagName   just dont write it  
             [attribute = 'value']        
@@ -42,20 +42,42 @@ other syntaxes for CSS;
 // if you have only id or classname you can use this shortcut for CSS
 <input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" 
 
-syntax:  tagname#id
+syntax:  tagname#id value
 
 code:   input#username
 
 
 
-syntax:  tagname#classname
+syntax:  tagname#classname value
 code:    input.#email
 
+---------------- Generate code with "contains"  keyword   REGULAR EXPRESSION-------------------------------
+ONLY XPATH CAN CONTAIN "contains" KEYWORD IN LOCATOR CODE
+syntax:   //tagName[contains(@attribute, 'value')]   -xpath
+code exm:   //input[contains(@id, 'email')] 
+
+syntax: tagName[attribute*='value']
 
 
+===============Section6 teacher Notes Misconception===========
 
-
-
+Every object may not have ID, className or name- Xpath and CSS Preferred
+Alpha numeric id may vary on every refresh- check
+Confirm the link object with anchor "a" tag
+Classes should not have spaces- Compound classes cannot be accepted
+Multiple values - Selenium identifies the first one- Scans from top left
+Double quotes inside double quotes are not accepted
+Xpath/CSS  can be defined in n number of ways
+Right click copy on blue highlighted html code to generate xpath
+Firepath depreciated from firefox- 
+when xpath starts with html-Not reliable- Switch browser to get another one
+There is no direct way to get CSS in chrome. You will find it in tool bar
+Degrade browser to less firefox 55 to ge Firepath
+$("") - for css ,    $x("")   or xpath
+//tagName[@attribute='value']  - xpath syntax
+tagName[attribute='value']  -CSS  tagName#id- CSS   tagname.classname- CSS
+//tagName[contains(@attribute,'value')]  - xpath regular expression
+tagName[Atrribute*='value'] - Css regular expression
 
 
 
