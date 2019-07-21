@@ -18,6 +18,34 @@ Absolute path : Parent to child  path
 
 Diference between Xpath and Css is with Xpath you can move back but with CSS you can only forward 
 
-Travers to sibling element using xpath:                         .//*[@id='tablist1-tab1']/following-sibling::li[2]
+Travers to sibling element using xpath:                         //*[@id='tablist1-tab1']/following-sibling::li[2]
 
-Travers back to Parent element from Child element using Xpath:  .//*[@id='tablist1-tab1']/parent::ul
+Travers back to Parent element from Child element using Xpath:  //*[@id='tablist1-tab1']/parent::ul
+
+--------------Identifying object with using text() using xpath location------------------------
+syntax: //*[text()=' Soap UI ']
+
+
+-------------------------------41 CSS Selectors Locators----------------------------------------
+
+CSS faster than Xpath
+css synatax:  #idName
+              .className
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

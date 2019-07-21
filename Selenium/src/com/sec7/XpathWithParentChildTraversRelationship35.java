@@ -12,7 +12,7 @@ public class XpathWithParentChildTraversRelationship35 {
 		
 		
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://google.com");
+		driver.get("https://qaclickacademy.com/interview.php");
 
 	}
 
