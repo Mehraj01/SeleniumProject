@@ -15,9 +15,11 @@ public class DynamicDropdown46 {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://spicejet.com/");
+		//select from 
 		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 		driver.findElement(By.xpath("//a[@value='BLR']")).click();
 		Thread.sleep(2000l);
+		//select to
 		//adding [2] to chose second dropdown section
 		driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();
 		Thread.sleep(2000l);
@@ -37,7 +39,7 @@ public class DynamicDropdown46 {
 		}
 		
 		Thread.sleep(2000l);
-		driver.findElement(By.id("hrefIncChd")).click();
+		//driver.findElement(By.id("hrefIncChd")).click();
 		Thread.sleep(2000l);
 		driver.findElement(By.cssSelector("[value='Done']")).click();
 		Select s = new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
