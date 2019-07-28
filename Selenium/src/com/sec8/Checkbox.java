@@ -19,12 +19,15 @@ public class Checkbox {
 		//select Trip type
 		driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_2")).click();
 		//driver.switchTo().alert().dismiss();
-		System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
-		driver.findElement(By.id("MultiCityModelAlert")).click();
-		driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
-		Assert.assertTrue(driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).isEnabled());
+		//prints style 
 		System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
 		
+		driver.findElement(By.id("MultiCityModelAlert")).click();
+		
+		driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
+		Assert.assertTrue(driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).isEnabled());
+		System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+		Assert.assertFalse(driver.findElement(By.id("ctl00$mainContent$view_date2")).isEnabled());
 		
 		
 		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
@@ -44,11 +47,31 @@ public class Checkbox {
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/table/tbody/tr[5]/td[4]/a")).click();
 		
 		//Select checkbox
-		System.out.println(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
+		System.out.println("SeniorCitizenDiscount.isSelected"+driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
+		//click friendsFamily checkbox
 		driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily")).click();
-		System.out.println(driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily")).isSelected());
+		//print status of friendsFamily checkbox(select or not)
+		System.out.println("friendsandfamily.isSelected()"+driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily")).isSelected());
+		
 		driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).click();
 		
+		if(driver.findElement(By.id("Div1")).getAttribute("style").contains("1"))
+
+		{
+
+		System.out.println("its enabled");
+
+		Assert.assertTrue(true);
+
+		}
+
+		else
+
+		{
+
+		Assert.assertTrue(false);
+
+		}
 		//Using TestNg
 		
 		Assert.assertFalse(driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily")).isSelected());
@@ -63,7 +86,7 @@ public class Checkbox {
 		s.selectByValue("USD");
         //s.selectByIndex(2);
 		//s.selectByVisibleText("AED");
-		System.out.println(driver.findElement(By.cssSelector("#ctl00_mainContent_DropDownListCurrency")).getText());
+		//System.out.println(driver.findElement(By.cssSelector("#ctl00_mainContent_DropDownListCurrency")).getText());
 		//System.out.println(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")).getAttribute("name"));
 		
 		

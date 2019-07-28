@@ -1,0 +1,13 @@
+
+
+Inplicite Wait
+
+Explicit Wait can be achived in two ways 
+ 1. WebDriverWait
+ 2. FluentWait
+ 
+ both implements Wait interface
+ 
+ 
+ 
+
