@@ -33,7 +33,13 @@ public class ImplicitWait {
 		
 		//d.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id='HEADING']"))));
 		
-		driver.findElement(By.id("HEADING")).click();
+		
+		//
+		
+		driver.findElement(By.xpath("//body[@id='BODY_BLOCK_JQUERY_REFLOW']/span/div[3]/div/div[2]/div[3]/span/span/div[26]")).click();
+		driver.findElement(By.cssSelector(".rsdc-month:nth-child(2) .rsdc-cell:nth-child(12)")).click();
+		//driver.findElement(By.id("HEADING")).click();
+		
 		
 		
 		//Explicit Wait

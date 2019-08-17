@@ -1,85 +1,86 @@
 
 
-----------------------------L 29-30 ---- Verifying Xpath and CSS ---------------------------------------
-xpath verifying code :       $("//tagName[@atribute='value']")
+----------------------------L 29-30 ---- Verifying Xpath and CSS
+---------------------------------------
+xpath verifying code :
+$("//tagName[@atribute='value']")
 
-CSS verifycation  code :    $x("CSS code")
+CSS verifycation code : $x("CSS code")
 
-----------------------------Lecture 31 -- Generate Custom Xpath from HTML attributes-------------------------------------------
+----------------------------Lecture 31 -- Generate Custom Xpath from
+HTML attributes-------------------------------------------
 
-HTML code: /*<input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" 
-             id="username" aria-describedby="error" style="display: block;" */
-        /*<input class="button r4 wide primary" type="submit" id="Login" name="Login" value="Log In">*/
-        
- tagName:  input            
- attribute : type
- value:    "email"
- attribute : name
- value:    "username" 
- 
-note: make sure to select unique atribute     
+HTML code: /*
+<input class="input r4 wide mb16 mt8 username" type="email"
+	value="" name="username" id="username" aria-describedby="error"
+	style="display: block;" */
+        /*
+	<input class="button r4 wide primary" type="submit" id="Login"
+		name="Login" value="Log In">
+		*/
 
-Syntax of Xpath:       //tagName[@atribute='value']
-let's create Xpath:    //input[@value='Log In'] , //input[@name='Login']
+		tagName: input
+		attribute : type
+		value: "email"
+		attribute : name
+		value: "username"
 
-note: If you not sure about specific tagName you can replace tagName * (star) sign
-syntax:   //*[@value='Log In'] , //input[@name='Login']
+		note: make sure to select unique atribute
+
+		Syntax of Xpath: //tagName[@atribute='value']
+		let's create Xpath: //input[@value='Log In'] , //input[@name='Login']
+
+		note: If you not sure about specific tagName you can replace tagName *
+		(star) sign
+		syntax: //*[@value='Log In'] , //input[@name='Login']
 
 
------------------------------L 32 ---Generate Custom CSS from HTML attributes--------------------------
-  html <input type="email" class="inputtext" name="email" id="email" data-testid="royal_email">
-       <input type="password" class="inputtext" name="pass" id="pass" data-testid="royal_pass">
-facebook email or phone  xpath:  //*[@id="email"]
-facebook password xpath:           //*[@id="pass"]
- 
- 
- 
-       note: no // slash and @  in CSS code.
-Syntax for CSS:   tagname[attribute = 'value']
-      note: If you not sure about specific tagName   just dont write it  
-            [attribute = 'value']        
-
-other syntaxes for CSS;
-
-// if you have only id or classname you can use this shortcut for CSS
-<input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" 
-
-syntax:  tagname#id value
-
-code:   input#username
+		-----------------------------L 32 ---Generate Custom CSS from HTML
+		attributes--------------------------
+		html
+		<input type="email" class="inputtext" name="email" id="email"
+			data-testid="royal_email">
+			<input type="password" class="inputtext" name="pass" id="pass"
+				data-testid="royal_pass">
+				facebook email or phone xpath: //*[@id="email"]
+				facebook password xpath: //*[@id="pass"]
 
 
 
-syntax:  tagname#classname value
-code:    input.#email
+				note: no // slash and @ in CSS code.
+				Syntax for CSS: tagname[attribute = 'value']
+				note: If you not sure about specific tagName just dont write it
+				[attribute = 'value']
 
----------------- Generate code with "contains"  keyword   REGULAR EXPRESSION-------------------------------
-ONLY XPATH CAN CONTAIN "contains" KEYWORD IN LOCATOR CODE
-syntax:   //tagName[contains(@attribute, 'value')]   -xpath
-code exm:   //input[contains(@id, 'email')] 
+				other syntaxes for CSS;
 
-syntax: tagName[attribute*='value']
+				// if you have only id or classname you can use this shortcut for CSS
+				<input class="input r4 wide mb16 mt8 username" type="email"
+					value="" name="username" id="username" syntax: tagname # id value
 
+					code: input # username syntax: tagname # classname value code:
+					input. # email - Generate code with " contains " keyword REGULAR
+					EXPRESSION------------------------------- ONLY XPATH CAN CONTAIN "
+					contains " KEYWORD IN LOCATOR CODE syntax: / tagName [ contains (
+					attribute , value ' xpath code exm: / input [ contains ( id , email '
 
-===============Section6 teacher Notes Misconception===========
-
-Every object may not have ID, className or name- Xpath and CSS Preferred
-Alpha numeric id may vary on every refresh- check
-Confirm the link object with anchor "a" tag
-Classes should not have spaces- Compound classes cannot be accepted
-Multiple values - Selenium identifies the first one- Scans from top left
-Double quotes inside double quotes are not accepted
-Xpath/CSS  can be defined in n number of ways
-Right click copy on blue highlighted html code to generate xpath
-Firepath depreciated from firefox- 
-when xpath starts with html-Not reliable- Switch browser to get another one
-There is no direct way to get CSS in chrome. You will find it in tool bar
-Degrade browser to less firefox 55 to ge Firepath
-$("") - for css ,    $x("")   or xpath
-//tagName[@attribute='value']  - xpath syntax
-tagName[attribute='value']  -CSS  tagName#id- CSS   tagname.classname- CSS
-//tagName[contains(@attribute,'value')]  - xpath regular expression
-tagName[Atrribute*='value'] - Css regular expression
+					syntax: tagName [ attribute * ='value' ] Section6 teacher Notes
+					Misconception=========== Every object may not have ID , className
+					or name- Xpath and CSS Preferred Alpha numeric id may vary on every
+					refresh- check Confirm the link object with anchor " a " tag
+					Classes should not have spaces- Compound classes cannot be accepted
+					Multiple values - Selenium identifies the first one- Scans from top
+					left Double quotes inside double quotes are not accepted Xpath /
+					CSS can be defined in n number of ways Right click copy on blue
+					highlighted html code to generate xpath Firepath depreciated from
+					firefox- when xpath starts with html-Not reliable- Switch browser
+					to get another one There is no direct way to get CSS in chrome. You
+					will find it in tool bar Degrade browser to less firefox 5 to ge
+					Firepath $ for css , x ( or xpath / tagName [ attribute='value' ]
+					xpath syntax tagName [ attribute='value' ] CSS tagName # id- CSS
+					tagname.classname- CSS / tagName [ contains ( attribute , value '
+					xpath regular expression tagName [ Atrribute * ='value' ] Css
+					regular expression
 
 
 

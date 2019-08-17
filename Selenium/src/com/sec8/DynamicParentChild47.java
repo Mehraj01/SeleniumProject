@@ -9,7 +9,7 @@ public class DynamicParentChild47 {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
 				"/Users/mehrajismayilov/Documents/Workplace/SeleniumAutomationFramework/SeleniumDependencies/driver/chromedriver");
-		//Static Dropdown
+		
 		
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://spicejet.com/");
