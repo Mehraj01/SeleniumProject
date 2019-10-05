@@ -12,7 +12,7 @@ public class JavaScriptExecutor {
 		///Enter the Beng.
 		// Verify that if airport options are displayed
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/mehrajismayilov/Documents/Workplace/SeleniumAutomationFramework/SeleniumDependencies/driver/chromedriver");
+				"/Users/mehrajismayilov/Documents/MyProjects/SeleniumAutomationFramework/SeleniumDependencies/driver/chromedriver");
 		
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://ksrtc.in");

@@ -17,7 +17,7 @@ public class RadioButton {
 //		driver.get("http://www.echoecho.com/htmlforms10.htm");
 		
 		System.setProperty("webdriver.gecko.driver",
-				"/Users/mehrajismayilov/SeleniumDependencies/driver/geckodriver");
+				"/Users/mehrajismayilov/git/geckodriver ");
 		
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://www.echoecho.com/htmlforms10.htm");

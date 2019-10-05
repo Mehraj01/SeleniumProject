@@ -9,7 +9,7 @@ public class PracticeOnSite {
 		
 	
 	System.setProperty("webdriver.chrome.driver",
-			"/Users/mehrajismayilov/Documents/Workplace/SeleniumAutomationFramework/SeleniumDependencies/driver/chromedriver");
+			"/Users/mehrajismayilov/SeleniumDependencies/driver/chromedriver");
 	
 	
 	WebDriver driver = new ChromeDriver();
@@ -34,6 +34,6 @@ public class PracticeOnSite {
 	
 	Thread.sleep(6000);
 	//driver.close();
-	driver.quit();
+	//driver.quit();
 	}
 }

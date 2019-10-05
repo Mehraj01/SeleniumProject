@@ -13,11 +13,11 @@ public class Calendar {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/mehrajismayilov/Documents/Workplace/SeleniumAutomationFramework/SeleniumDependencies/driver/chromedriver");
+				"/Users/mehrajismayilov/SeleniumDependencies/driver/chromedriver");
 
 		WebDriver driver = new ChromeDriver();
 		//driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.get("https://www.tripadvisor.com/Hotels-g155032-Montreal_Quebec-Hotels.html");
 		
 		//System.out.println(driver.findElement(By.xpath("//div[@class = 'rsdc-month-title yb3 ']")).getText());

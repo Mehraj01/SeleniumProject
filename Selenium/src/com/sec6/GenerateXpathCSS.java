@@ -3,6 +3,7 @@ package com.sec6;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 /*
  * Facebook example
@@ -11,11 +12,16 @@ public class GenerateXpathCSS {
 
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/mehrajismayilov/Documents/Workplace/SeleniumAutomationFramework/SeleniumDependencies/driver/chromedriver");
+//		System.setProperty("webdriver.chrome.driver",
+//				"/Users/mehrajismayilov/git/chromedriver");
 		
+		System.setProperty("webdriver.gecko.driver",
+				"/Users/mehrajismayilov/git/geckodriver ");
 		
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
+	    //WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://facebook.com");
 		driver.get("https://facebook.com");
 		
 		//Xpath==========
@@ -29,7 +35,7 @@ public class GenerateXpathCSS {
 		//Syntax for "contains" keyword "//tagName[contains(@attribute,'value')]"
 		driver.findElement(By.xpath("//input[contains(@id,'emai')]")).sendKeys("asdf");;
 		driver.findElement(By.xpath("//input[contains(@id,'pas')]")).sendKeys("1234");;
-		driver.findElement(By.xpath("//input[contains(@value,'Log ')]")).click();
+		driver.findElement(By.xpath("//input[contains(@value,'Log')]")).click();
 		
 		
 		
