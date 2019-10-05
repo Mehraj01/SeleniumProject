@@ -15,7 +15,7 @@ public class AssignmentFrames {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/mehrajismayilov/git/SeleniumProject/Selenium/drivers/chromedriver");
+				"/Users/mehrajismayilov/git/SeleniumProject/Selenium/drivers/chromedriver 2");
 		
 
 		WebDriver driver = new ChromeDriver();
